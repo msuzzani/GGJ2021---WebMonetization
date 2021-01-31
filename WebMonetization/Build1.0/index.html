@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | BOOTiESCAPE</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <link rel="stylesheet" href="style-donate.css">
+    <script src="TemplateData/UnityProgress.js"></script>
+    <script src="Build/UnityLoader.js"></script>
+
+    <script>
+        var unityInstance = UnityLoader.instantiate("unityContainer", "Build/Build.json", { onProgress: UnityProgress });
+    </script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <script src="custom.js"></script>
+
+</head>
+    
+<body>
+    <div class="container-fluid">
+        <div class="row">
+
+            <div class="col-xs-12">
+                <div class="header-doante">
+                    <div class="col-xs-3">
+
+                    </div>
+                    <div class="col-xs-6" style="text-align:center;">
+                        <p><div class="donate-logo"></div></p>
+                    </div>
+                    <div class="col-xs-3" style="text-align:left; padding-top:150px;">
+                        <a href="https://globalgamejam.org/2021/games/bootiescape-9" target="_blank" style="color:white;">Download Bootiescape</a>
+                        <a href="https://n-3.it/" target="_blank" style="color:white;"> | N3 Website</a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-5">
+
+                </div>
+                <div class="col-xs-3" align="left">
+                    </br>
+                    <p>1.Sign Up in <a href="https://coil.com" target="_blank">coil.com</a></p>
+                    <p>2.Add Coil Extension in your Browser</p>
+                    <p>3.Click on "Donate!" below</p>
+                </div>
+                <div class="col-xs-4">
+
+                </div>
+            </div>
+                <div class="row">
+                    <div class="col-xs-5">
+
+                    </div>
+                    <div class="col-xs-3" style="text-align:center;display:block;">
+                        <div class="donate-why" id="donate-why"></div>
+                        <div class="donate-btn-start" id="donate-btn-start"></div>
+                        <div class="donate-btn-stop" id="donate-btn-stop" style="display:none;"> </div>
+
+                    </div>
+                    <div class="col-xs-4">
+
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="row">
+                <div class="webgl-content" style="margin-top:200px;">
+                    <div id="unityContainer" style="width: 800px; height: 500px"></div>
+                    <div class="footer">
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    <footer class="footer-wrapper">
+        
+            <div class="col-xs-3"></div>
+            <div class="col-xs-6">
+                <div class="footer-doante" style="color:white;margin-top:30px;">
+                    <p>Copyright 2021 © N3 Srl | P.IVA 03486350121 | <a href="https://n-3.it/privacy-policy/" target="_blank" style="color:white;">Privacy Policy</a></p>
+                    <p>info@n-3.it | +39 02 407 098 00</p>
+
+</div>
+            </div>
+            <div class="col-xs-3"></div>
+            
+        
+    </footer>
+
+
+
+</body>
+<div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+         
+            <div class="modal-body">
+                <img src="" id="imagepreview" style="width: 890px; height:899px;">
+            </div>
+            
+        </div>
+    </div>
+</div>
+</html>

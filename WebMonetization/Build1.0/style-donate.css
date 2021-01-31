@@ -1,0 +1,74 @@
+body {
+    font-weight:bold;
+}
+
+.footer-wrapper {
+    background-color: #00938F;
+       height: 100px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+.header-doante {
+    background-color: #00938F;
+    height: 231px;
+    width: 100%;
+    text-align: center;
+}
+.donate-logo {
+    background-image: url("Img/Website-donation-bottiescape.png");
+    width: 483px;
+    height: 183px;
+    background-repeat: no-repeat;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.donate-why {
+    
+    background: url('Img/hy-donate-button.png');
+    cursor: pointer;
+    background-repeat: no-repeat;
+    height: 40px;
+    }
+
+.donate-btn-start {
+    background: url('Img/Website-donation-start-donate-simple.png');
+    cursor: pointer;
+    background-repeat: no-repeat;
+    height: 100px;
+    
+}
+
+    .donate-btn-start:hover {
+        background: url('Img/Website-donation-start-donate-over.png');
+        cursor: pointer;
+        background-repeat: no-repeat;
+        height: 100px;
+        
+    }
+
+.donate-btn-stop {
+    background: url('Img/Website-donation-stop-donate-simple.png');
+    cursor: pointer;
+    background-repeat: no-repeat;
+    height: 100px;
+    
+}
+
+    .donate-btn-stop:hover {
+        background: url('Img/Website-donation-stop-donate-over.png');
+        cursor: pointer;
+        background-repeat: no-repeat;
+        height: 100px;
+        
+    }
+.modal-body {
+    padding:0px !important;
+}
+.modal-content {
+    width:100%;
+}
+.modal-dialog {
+    width: 889px !important;
+}

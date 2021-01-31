@@ -48,7 +48,7 @@ public class SpawnPrefabOnMonetization : MonoBehaviour
 
         // Debug.Log("MonetizationStart requestId: " + requestId + ", id: " + id + ", resolvedEndpoint: " + resolvedEndpoint + ", metaContent" + metaContent);
 
-        GetComponent<SpriteRenderer>().color = Color.green;
+        //GetComponent<SpriteRenderer>().color = Color.green;
     }
 
     // A monetization progress event should occur roughly every two seconds after the monetization progress occurs
@@ -90,7 +90,7 @@ public class SpawnPrefabOnMonetization : MonoBehaviour
 
         // Debug.Log("MonetizationStart requestId: " + requestId + ", id: " + id + ", resolvedEndpoint: " + resolvedEndpoint + ", metaContent" + metaContent);
 
-        GetComponent<SpriteRenderer>().color = Color.red;
+        //GetComponent<SpriteRenderer>().color = Color.red;
     }
 
 }

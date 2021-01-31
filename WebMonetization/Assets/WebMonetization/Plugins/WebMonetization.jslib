@@ -21,33 +21,39 @@ mergeInto(LibraryManager.library, {
             }
         }
 
+        /*body css*/
+        document.body.style.textAlign = "center";
+        document.getElementsByClassName('footer')[0].style.visibility = 'hidden';
+        document.getElementById('unityContainer').style.background = '#fff';
+
         function createMonetizationButton() {
             //Create an input type dynamically.   
-            var element = document.createElement("input");
-            //Assign different attributes to the element. 
-            element.type = "button";
-            element.value = 'buttonMonetization'; // Really? You want the default value to be the type string?
-            element.name = "buttonMonetization"; // And the name too?
-            element.onclick = function () { // Note this is a function
-                if (monetizationEnabled=="1") {
-                    monetizationEnabled = "0";
-                    var existingMonetizationTags = document.querySelectorAll('meta[name=monetization]');
-                    existingMonetizationTags.forEach(function (el) {
-                        console.log('removing existing monetization tag', el);
-                        el.parentNode.removeChild(el);
-                    });
-                } else {
-                    monetizationEnabled = "1";
-                    var meta = document.createElement('meta');
-                    meta.setAttribute('name', 'monetization');
-                    meta.setAttribute('content', paymentPointerString);
-                    document.head.append(meta);
-                }
+            var element_start = document.getElementById("donate-btn-start");
+            var element_stop = document.getElementById("donate-btn-stop");
+         
+            element_start.onclick = function () { // Note this is a function
+                monetizationEnabled = "1";
+                var meta = document.createElement('meta');
+                meta.setAttribute('name', 'monetization');
+                meta.setAttribute('content', paymentPointerString);
+                document.head.append(meta);
+                element_start.style.display = "none";
+                element_stop.style.display = "block";
+                
             };
 
+            element_stop.onclick = function () { // Note this is a function
+                monetizationEnabled = "0";
+                element_start.style.display = "block";
+                element_stop.style.display = "none";
+                var existingMonetizationTags = document.querySelectorAll('meta[name=monetization]');
+                existingMonetizationTags.forEach(function (el) {
+                    console.log('removing existing monetization tag', el);
+                    el.parentNode.removeChild(el);
+                });
 
-            //Append the element in page (in span).  
-            document.body.appendChild(element);
+            };
+      
 
         }
         createMonetizationButton();

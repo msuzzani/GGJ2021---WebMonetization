@@ -521,4 +521,4 @@ ScriptsOnlyBuild:
   platform: 20
   scenePathNames:
   - Assets/WebMonetization/SampleScene/WebMonetizationSampleScene.unity
-  playerPath: C:/Users/manuele/Documents/GitHub/WebMonetization/WebMonetization/Build
+  playerPath: C:/Users/manuele/Documents/GitHub/GGJ2021---WebMonetization/WebMonetization/Build
