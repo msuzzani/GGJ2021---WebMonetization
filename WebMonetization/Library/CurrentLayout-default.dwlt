@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 17
+  controlID: 21
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -94,8 +94,8 @@ MonoBehaviour:
     y: 0
     width: 404
     height: 616
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -219,7 +219,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 79
+  controlID: 22
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -244,7 +244,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 80
+  controlID: 23
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -264,8 +264,8 @@ MonoBehaviour:
     y: 0
     width: 1229
     height: 616
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -336,22 +336,22 @@ MonoBehaviour:
     m_SceneHandles: 
     m_ShowAllHits: 0
     m_SkipHidden: 0
-    m_SearchArea: 0
+    m_SearchArea: 1
     m_Folders:
-    - Assets/WebMonetization/Plugins
+    - Assets/WebMonetization/Scripts
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/WebMonetization/Plugins
+  - Assets/WebMonetization/Scripts
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\manuele\Documents\GitHub\WebMonetization\WebMonetization
+  m_LastProjectPath: C:\Users\manuele\Documents\GitHub\GGJ2021---WebMonetization\WebMonetization
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 42}
-    m_SelectedIDs: 0e3d0000
-    m_LastClickedID: 15630
-    m_ExpandedIDs: 00000000da3c00000c3d0000183d00001a3d000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 78340000
+    m_LastClickedID: 13432
+    m_ExpandedIDs: 000000007434000076340000783400007a34000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -379,7 +379,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 
+    m_ExpandedIDs: 000000007434000076340000783400007a340000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -502,9 +502,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 4ce2ffff64e2fffffae2ffff84e3ffff9ce3ffff9ee3ffffc8e3ffffe0e3ffff76e4ffff02e5ffff1ae5ffff1ce5ffff46e5ffff5ee5fffff8e5fffff2e6ffff0ae7ffff0ce7ffff36e7ffff4ee7ffffe4e7ffff6ee8ffff86e8ffff1ce9ffffa6e9ffffbee9ffff54eaffffdeeafffff6eafffff8eaffff22ebffff3aebffffd0ebffff6cecffff84ecffff86ecffffb8ecffffd0ecffff66edffff0eeeffff26eeffffbceeffff4aefffff62efffff64efffff8eefffffa6efffffa8efffffd0efffffe8efffffeaefffff18f0ffff30f0ffff32f0ffff5cf0ffff74f0ffff76f0ffffa4f0ffffbcf0ffffc2f0ffff02f1ffff1af1ffffb0f1ffff1ef3ffff36f3ffff38f3ffff74f3ffff8cf3ffff8ef3ffffb8f3ffffd0f3ffffd2f3ffff50f4ffff68f4ffff02f5ffff0cf9ffff32fbffff6c450000
+      m_SelectedIDs: a83e0000
+      m_LastClickedID: 16040
+      m_ExpandedIDs: 96f6ffffaef6ffffb0f6ffffdaf6fffff2f6fffff4f6ffff1ef7ffff36f7ffff38f7ffff62f7ffff7af7ffff7cf7ffffa6f7ffffbef7ffffc0f7ffffeaf7ffff02f8ffff9cf8ffff2ef9ffff46f9ffff48f9ffff76f9ffff8ef9ffff28faffff6afbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 

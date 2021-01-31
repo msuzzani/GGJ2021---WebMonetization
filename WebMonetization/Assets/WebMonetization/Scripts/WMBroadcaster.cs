@@ -14,21 +14,9 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 using System.Runtime.InteropServices;
-using WebSocketSharp;
-using WebSocketSharp.Server;
-public class MonetizationStatus : WebSocketBehavior
-{
-    protected override void OnMessage(MessageEventArgs e)
-    {
-        var msg = e.Data == "BALUS"
-                  ? "I've been balused already..."
-                  : "I'm not available now.";
 
-        Send(msg);
-    }
-}
+
 public class WMBroadcaster : MonoBehaviour
 {
 
@@ -76,12 +64,7 @@ public class WMBroadcaster : MonoBehaviour
             Debug.Log("Simulating Monetization Events! Don't forget to shut this off for release!");
             StartSimulation();
         }
-
-        //webserver
-        var wssv = new WebSocketServer("ws://127.0.0.1:8081");
-        wssv.AddWebSocketService<MonetizationStatus>("/MonetizationStatus");
-        wssv.Start();
-        
+   
 
     }
 

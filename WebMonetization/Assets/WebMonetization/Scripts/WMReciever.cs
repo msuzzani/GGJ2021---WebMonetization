@@ -17,9 +17,7 @@ using System.IO;
 
 public class WebMonetizationReciever : MonoBehaviour
 {
-    private string LockFileName = "monetization.lock";
-    private string LockFileDir = "N3HackForBusiness";
-
+    
     // register one or both events if you want to use them
     void OnEnable()
     {
@@ -50,7 +48,7 @@ public class WebMonetizationReciever : MonoBehaviour
         // string metaContent = detail["metaContent"] as string;
 
         // Debug.Log("MonetizationStart requestId: " + requestId + ", id: " + id + ", resolvedEndpoint: " + resolvedEndpoint + ", metaContent" + metaContent);
-        //SetStartLock();
+        
         Debug.Log("MonetizationStart");
     }
 
@@ -83,18 +81,9 @@ public class WebMonetizationReciever : MonoBehaviour
         // long scale = (long) detail["assetScale"];
 
         // Debug.Log("MonetizationProgress amount " + amountAsLong + ", assetCode: " + assetCode + ", scale: " + scale);
-        //SetStopLock();
+    
         Debug.Log("MonetizationStop");
     }
     
-    void SetStartLock() {
-        System.IO.File.WriteAllText("C:\\monetization.lock", "MonetizationProgress");
-    }
-    void SetStopLock() {
-        
-        if (System.IO.File.Exists("C:\\monetization.lock")) {
-            System.IO.File.Delete("C:\\monetization.lock");
-        }
-        
-    }
+    
 }

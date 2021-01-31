@@ -14,7 +14,7 @@
 mergeInto(LibraryManager.library, {
 
     InitializeMonetization: function (paymentPointer, verbose) {
-        var monetizationEnabled = false;
+        var monetizationEnabled = "0";
         function log() {
             if (verbose) {
                 console.log.apply(this);
@@ -29,15 +29,15 @@ mergeInto(LibraryManager.library, {
             element.value = 'buttonMonetization'; // Really? You want the default value to be the type string?
             element.name = "buttonMonetization"; // And the name too?
             element.onclick = function () { // Note this is a function
-                if (monetizationEnabled) {
-                    monetizationEnabled = false;
+                if (monetizationEnabled=="1") {
+                    monetizationEnabled = "0";
                     var existingMonetizationTags = document.querySelectorAll('meta[name=monetization]');
                     existingMonetizationTags.forEach(function (el) {
                         console.log('removing existing monetization tag', el);
                         el.parentNode.removeChild(el);
                     });
                 } else {
-                    monetizationEnabled = true;
+                    monetizationEnabled = "1";
                     var meta = document.createElement('meta');
                     meta.setAttribute('name', 'monetization');
                     meta.setAttribute('content', paymentPointerString);
@@ -61,8 +61,23 @@ mergeInto(LibraryManager.library, {
             console.log('It appears that your payment pointer is not configured properly.');
         }
 
-        // remove any existing payment tags
-
+        setInterval(function () {
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "http://localhost:1337?monetization=" + monetizationEnabled, true);
+            xhr.onload = function (e) {
+                if (xhr.readyState === 4) {
+                    if (xhr.status === 200) {
+                        console.log(xhr.responseText);
+                    } else {
+                        console.error(xhr.statusText);
+                    }
+                }
+            };
+            xhr.onerror = function (e) {
+                console.error(xhr.statusText);
+            };
+            xhr.send(null); 
+        }, 1000);
 
         // we want to make sure that we recieve a new monetizationstarted event, so we wait a frame before injecting the
         // meta tag. (In the case where we've actually removed an existing webmonetization meta tag.
@@ -80,10 +95,7 @@ mergeInto(LibraryManager.library, {
                 }
 
                 document.monetization.addEventListener('monetizationstart', function (event) {
-                    monetizationEnabled = true;
-                    if (typeof (Storage) !== "undefined") {
-                        localStorage.setItem("monetizationlock", "true");
-                    }
+                    monetizationEnabled = "1";
                     sendMessageToWebMonetizationBroadcaster('monetizationstart', event.detail);
                 });
 
@@ -92,12 +104,13 @@ mergeInto(LibraryManager.library, {
                 });
 
                 document.monetization.addEventListener('monetizationstop', function (event) {
-                    monetizationEnabled = false;
-                    if (typeof (Storage) !== "undefined") {
-                        localStorage.setItem("monetizationlock", "false");
-                    }
+                    monetizationEnabled = "0";
                     sendMessageToWebMonetizationBroadcaster('monetizationstop', event.detail);
                 });
+
+
+                
+
             }
             else {
                 console.log('no monetization found');
